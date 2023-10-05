@@ -15,7 +15,7 @@ export function renderWithContext(children) {
   )
 };
 
-export function withRouter(component, history) {
+function withRouter(component, history) {
   return (
     <Router history={ history }>
       { component }
