@@ -1,26 +1,11 @@
-import React, { useState, useEffect } from 'react';
-
-import { fetchTasks } from '../fetchFunctions/fetchTasks';
+import React, { useContext } from 'react';
+import TasksContext from '../context/tasksContext';
 
 const TaskOverviewCards = () => {
-  const [taskCount, setTaskCount] = useState({ completed: 0, pending: 0 });
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const tasks = await fetchTasks();
-
-        const completedTasks = tasks.filter(task => task.completed);
-        const pendingTasks = tasks.filter(task => !task.completed);
-
-        setTaskCount({ completed: completedTasks.length, pending: pendingTasks.length });
-      } catch (error) {
-        setError("Error getting data from API. Please try again later");
-      }
-    };
-    fetchData();
-  }, []);
+  const {
+    error,
+    taskCount,
+  } = useContext(TasksContext);
 
   return (
     <div className="task-overview-cards">

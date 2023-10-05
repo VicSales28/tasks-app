@@ -1,37 +1,13 @@
-import React, { useState, useEffect } from 'react';
-
-import { fetchTasks } from '../fetchFunctions/fetchTasks';
+import React, { useContext } from 'react';
+import TasksContext from '../context/tasksContext';
 import TaskFilters from './TaskFilters';
 
-const filterTasks = (tasks, filter) => {
-  return tasks.filter(task => {
-    if (filter === 'completed') {
-      return task.completed;
-    } else if (filter === 'pending') {
-      return !task.completed;
-    }
-    return true;
-  });
-};
-
 const TaskList = () => {
-  const [tasks, setTasks] = useState([]);
-  const [filter, setFilter] = useState('all');
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const data = await fetchTasks();
-        setTasks(data);
-      } catch (error) {
-        setError("Error getting data from API. Please try again later");
-      }
-    };
-    fetchData();
-  }, []);
-
-  const filteredTasks = filterTasks(tasks, filter);
+  const {
+    error,
+    setFilter,
+    filteredTasks,
+  } = useContext(TasksContext);
 
   return (
     <div className="task-list">

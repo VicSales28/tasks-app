@@ -1,13 +1,14 @@
-import axios from 'axios';
-
-const ENDPOINT = 'http://localhost:8080/api/tasks/';
-
-export const fetchTasks = async () => {
+// Data fetching using JavaScript Fetch API
+const fetchTasks = async () => {
   try {
-    const response = await axios.get(ENDPOINT);
-    return response.data;
+    const endpoint = 'http://localhost:8080/api/tasks/';
+    const promise = await fetch(endpoint);
+    const response = await promise.json();
+    return response;
   } catch (error) {
-    console.error('Error getting data from API', error);
+    console.log('API request error: ', error.message);
     throw error;
   }
 };
+
+export default fetchTasks;
