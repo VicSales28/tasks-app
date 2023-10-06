@@ -12,7 +12,7 @@ const HomePage = () => {
         <div className="col-md-3">
           <SideMenu />
         </div>
-        <div className="col-md-9">
+        <div className="col-md-9 mt-4">
           <h1>Welcome to the Home Page!</h1>
           <TaskOverviewCards />
         </div>

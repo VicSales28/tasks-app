@@ -2,9 +2,10 @@ import React from 'react';
 
 const TaskFilters = ({ setFilter }) => {
   return (
-    <div className="filter-buttons">
+    <div className="filter-buttons mb-4">
 
       <button
+        className="btn btn-primary"
         data-testid="all-filter"
         onClick={() => setFilter('all')}
       >
@@ -12,6 +13,7 @@ const TaskFilters = ({ setFilter }) => {
       </button>
 
       <button
+        className="btn btn-success"
         data-testid="completed-filter"
         onClick={() => setFilter('completed')}
       >
@@ -19,6 +21,7 @@ const TaskFilters = ({ setFilter }) => {
       </button>
 
       <button
+        className="btn btn-warning"
         data-testid="pending-filter"
         onClick={() => setFilter('pending')}
       >

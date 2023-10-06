@@ -8,21 +8,19 @@ const TaskOverviewCards = () => {
   } = useContext(TasksContext);
 
   return (
-    <div className="task-overview-cards">
-      <h2>Task Overview</h2>
-      {error && <div className="error-message">{error}</div>}
-      <div className="overview-container">
+    <div className="bg-light p-4 rounded shadow">
 
-      <div className="status-card" data-testid="completed-card">
-          <h3>Completed Tasks</h3>
-          <p>{taskCount.completed}</p>
+      <h2 className="dark-blue-text mb-4">Tasks Overview</h2>
+      
+      {error && <div className="text-danger">{error}</div>}
+      <div className="status-card bg-success text-white p-4 mb-4" data-testid="completed-card">
+        <h3 className="font-weight-bold mb-2">Completed Tasks</h3>
+        <p className="font-weight-bold mb-0">{taskCount.completed}</p>
       </div>
 
-        <div className="status-card" data-testid="pending-card">
-          <h3>Pending Tasks</h3>
-          <p>{taskCount.pending}</p>
-        </div>
-
+      <div className="status-card bg-secondary text-white p-4" data-testid="pending-card">
+        <h3 className="font-weight-bold mb-2">Pending Tasks</h3>
+        <p className="font-weight-bold mb-0">{taskCount.pending}</p>
       </div>
     </div>
   );
