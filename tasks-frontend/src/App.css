@@ -1,5 +1,5 @@
-.container {
-  background-color: var(--strong-cyan);
+.main-container {
+  background-color: var(--white-smoke);
   height: 100vh;
   width: 100%;
 }

@@ -5,6 +5,10 @@
   /* colors */
 
   --strong-cyan: rgb(13, 185, 148);
+  --perylene-blue: rgb(18, 65, 145);
+  --navy-blue: rgb(0, 17, 53);
+  --white-smoke: rgb(232, 236, 238);
+
 }
 
 body {

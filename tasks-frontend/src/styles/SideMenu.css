@@ -1,0 +1,11 @@
+.sidebar {
+  background-color: var(--perylene-blue);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  width: 17.5rem;
+}
+
+.nav-link:hover {
+  background-color: var(--strong-cyan);
+}
