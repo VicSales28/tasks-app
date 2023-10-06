@@ -19,7 +19,7 @@ const TaskList = () => {
 
       <ul>
         {filteredTasks.map(task => (
-          <li key={task.id}>
+          <li key={task.id} data-testid="task-item">
             {task.text} - {task.completed ? 'Completed' : 'Pending'}
           </li>
         ))}
