@@ -13,12 +13,12 @@ const TaskOverviewCards = () => {
       {error && <div className="error-message">{error}</div>}
       <div className="overview-container">
 
-        <div className="status-card">
+      <div className="status-card" data-testid="completed-card">
           <h3>Completed Tasks</h3>
           <p>{taskCount.completed}</p>
-        </div>
+      </div>
 
-        <div className="status-card">
+        <div className="status-card" data-testid="pending-card">
           <h3>Pending Tasks</h3>
           <p>{taskCount.pending}</p>
         </div>
