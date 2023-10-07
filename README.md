@@ -58,3 +58,12 @@ Test file names:
 - apiRequests.test.js
 - taskFilters.test.js
 - taskOverviewCards.test.js
+
+## Application running
+
+<p align="center">
+  <img src="https://github.com/VicSales28/tasks-app/assets/115190439/36409213-3061-4ad4-ac5b-0818674fef99" alt="Desktop Version" width="400"/>
+</p>
+<p align="center">
+  <img src="https://github.com/VicSales28/tasks-app/assets/115190439/3bb04f5c-8f48-4d32-89eb-111f89ed3532" alt="App Version" width="500"/>
+</p>
