@@ -15,24 +15,24 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
 
   return (
     <nav aria-label="Task Pagination">
-      <ul className="pagination justify-content-center">
+      <ul className="pagination justify-content-center d-flex flex-wrap">
         {currentPage > 1 && (
-          <li className="page-item">
-            <button className="page-link" onClick={() => onPageChange(currentPage - 1)}>
+          <li>
+            <button className="btn btn-light" onClick={() => onPageChange(currentPage - 1)}>
               &laquo; Prev
             </button>
           </li>
         )}
         {getPageNumbers().map((page) => (
-          <li key={page} className={`page-item ${currentPage === page ? 'active' : ''}`}>
-            <button className="page-link" onClick={() => onPageChange(page)}>
+          <li key={page} className={`${currentPage === page ? 'active' : ''}`}>
+            <button className="btn btn-light" onClick={() => onPageChange(page)}>
               {page}
             </button>
           </li>
         ))}
         {currentPage < totalPages && (
-          <li className="page-item">
-            <button className="page-link" onClick={() => onPageChange(currentPage + 1)}>
+          <li>
+            <button className="btn btn-light" onClick={() => onPageChange(currentPage + 1)}>
               Next &raquo;
             </button>
           </li>

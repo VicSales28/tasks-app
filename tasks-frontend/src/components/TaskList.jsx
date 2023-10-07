@@ -10,7 +10,7 @@ const TaskList = () => {
     filteredTasks,
   } = useContext(TasksContext);
 
-  const tasksPerPage = 8;
+  const tasksPerPage = 11;
   const [currentPage, setCurrentPage] = useState(1);
 
   const indexOfLastTask = currentPage * tasksPerPage;
@@ -31,9 +31,9 @@ const TaskList = () => {
 
       {error && <div className="text-danger mb-4">{error}</div>}
 
-      <ul className="list-group mb-4">
+      <ul className="list mb-4">
         {currentTasks.map(task => (
-          <li key={task.id} className="list-group-item" data-testid="task-item">
+          <li key={task.id} className="list-item" data-testid="task-item">
             {task.text} - {task.completed ? 'Completed' : 'Pending'}
           </li>
         ))}
